@@ -1,5 +1,5 @@
 {
-  "name": "jsformat",
+  "name": "jsfmt",
   "version": "0.1.0",
   "description": "a tool to format javascript source code",
   "main": "index.js",
