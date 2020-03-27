@@ -12,6 +12,9 @@
     "debug": "node index.js",
     "test": "echo No testcases; exit 0"
   },
+  "bin": {
+    "jsindent": "./bin/jsindent"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://triphop@github.com/triphop/jsformat.git"
