@@ -6,9 +6,6 @@ const request = require('request');
 
 const js_beautify = require("./beautify").js_beautify;
 
-const raw = `let foobar= async res => {console.log('>>', res);
-return +new Date; }`;
-
 async function request_sync(options) {
     return new Promise( (resolve, reject) => {
         request(options, function(err, res, data) {
