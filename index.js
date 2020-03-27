@@ -117,7 +117,6 @@ if (argv._.length !== 1) {
     terminate();
 }
 
-let source_codes = get_source_codes();
 let opt = {
     indent_size: argv.indent_size,
     indent_char: argv.indent_char,
@@ -130,13 +129,16 @@ let opt = {
     wrap_line_length: argv.wrap_line_length,
 }
 
-let output_codes = js_beautify(source_codes, opt);
-if (argv.output) {
-    try {
-        fs.writeFileSync(argv.output, output_codes);
-    } catch(err) {
-        terminate(`failed to write file to ${argv.output} due to ${err.message()}`);
+!async function() {
+    let source_codes = await get_source_codes();
+    let output_codes = js_beautify(source_codes, opt);
+    if (argv.output) {
+        try {
+            fs.writeFileSync(argv.output, output_codes);
+        } catch(err) {
+            terminate(`failed to write file to ${argv.output} due to ${err.message()}`);
+        }
+    } else {
+        console.log(output_codes);
     }
-} else {
-    console.log(output_codes);
-}
+}()

@@ -1,6 +1,6 @@
 {
   "name": "jsformat",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "a tool to format javascript source code",
   "main": "index.js",
   "dependencies": {
