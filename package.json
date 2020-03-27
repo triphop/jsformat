@@ -1,6 +1,6 @@
 {
   "name": "jsindent",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "a tool to format javascript source code",
   "main": "index.js",
   "dependencies": {
